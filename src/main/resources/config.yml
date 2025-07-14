@@ -1,0 +1,112 @@
+# Fallen God Testament Configuration
+testament:
+  fragments:
+    chest_spawn_chance: 0.02      # 2% chance
+    mob_drop_chance: 0.001        # 0.1% chance
+    min_chests_for_fragments: 50  # Exploration requirement
+    chest_cooldown_hours: 2       # Hours between chest fragments
+    mob_cooldown_hours: 1         # Hours between mob fragments
+    
+  # Fragment rarity distribution (must sum to 100)
+  fragment_weights:
+    fragment_1: 30
+    fragment_2: 20
+    fragment_3: 15
+    fragment_4: 13
+    fragment_5: 10
+    fragment_6: 7
+    fragment_7: 5
+
+# Enhanced Features
+features:
+  # Sound and particle effects
+  effects:
+    altar_completion_sound: true
+    fragment_found_particles: true
+    ascension_effects: true
+    weapon_ability_feedback: true
+  
+  # Cross-platform compatibility
+  cross_platform:
+    bedrock_friendly_ui: true
+    avoid_offhand_triggers: true
+    chat_based_confirmations: false
+  
+  # Altar system enhancements
+  altars:
+    grief_protection: true
+    auto_regeneration: false
+    beacon_height_offset: 4
+    export_locations: true
+
+# Testament Conflicts Configuration
+conflicts:
+  enabled: true
+  penalties:
+    fallen_vs_veil:
+      effect: "weakness"
+      duration: 600  # 30 seconds
+      level: 1
+    banishment_vs_abyssal:
+      effect: "slowness"
+      duration: 600
+      level: 1
+    sylvan_vs_tempest:
+      effect: "mining_fatigue"
+      duration: 600
+      level: 1
+    forge_vs_void:
+      effect: "nausea"
+      duration: 600
+      level: 1
+    time_vs_shadow:
+      effect: "blindness"
+      duration: 300
+      level: 1
+    blood_vs_crystal:
+      effect: "poison"
+      duration: 300
+      level: 1
+# Heart of Fallen God Configuration
+heart_of_fallen_god:
+  enabled: true
+  extra_hearts: 15              # +15 hearts (25 total)
+  strength_level: 1             # Strength I
+  regeneration_level: 2         # Regeneration II
+  resistance_level: 1           # Resistance I
+
+# Veil of Nullification Configuration
+veil_nullification:
+  enabled: true
+  range: 16.0                   # 16 block range
+  veil_effects:
+    slow_falling: true
+    night_vision: true
+    speed_level: 1
+
+# God-specific configurations
+gods:
+  fallen:
+    biomes: ["SWAMP", "DARK_FOREST", "DEEP_DARK"]
+    center_block: "CRYING_OBSIDIAN"
+  banishment:
+    biomes: ["DESERT", "BADLANDS", "SAVANNA"]
+    center_block: "MAGMA_BLOCK"
+  abyssal:
+    biomes: ["OCEAN", "DEEP_OCEAN", "WARM_OCEAN", "COLD_OCEAN"]
+    center_block: "DARK_PRISMARINE"
+  sylvan:
+    biomes: ["FOREST", "BIRCH_FOREST", "DARK_FOREST", "JUNGLE"]
+    center_block: "OAK_LOG"
+  tempest:
+    biomes: ["MOUNTAINS", "WINDSWEPT_HILLS", "JAGGED_PEAKS"]
+    center_block: "LIGHTNING_ROD"
+  veil:
+    biomes: ["END_HIGHLANDS", "END_MIDLANDS", "END_BARRENS"]
+    center_block: "END_PORTAL_FRAME"
+
+# Altar generation settings
+altar_generation:
+  spacing: 32                   # Chunks between altars
+  separation: 8                 # Minimum chunks between different altars
+  salt: 14357617               # Random seed modifier
